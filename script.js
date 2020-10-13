@@ -16,19 +16,22 @@ function vypocet() {
     alert("Není zadáno první číslo");
   } else if (isNaN(c2)) {
     alert ("Neni zadáno druhé číslo");
-  } else if (op == "plus"){
+  } else if (op == "plus") {
     vysl = c1 + c2;
-  } else if (op == "minus"){
+  } else if (op == "minus") {
     vysl = c1 - c2;
-  } else if (op == "krat"){
+  } else if (op == "krat") {
     vysl = c1 * c2;
-  } else if (c2 === 0) {
-    alert ("Nelze dělit nulou");
-  } else if (op == "deleno"){
+  } else if (op == "deleno") {
+    if (c2 ==0) {
+      alert("Nelze delit nulou");
+    } else {
     vysl = c1 / c2;
+    }
   }
   console.log(vysl);
   document.getElementById("vysledek").value = vysl;
-  document.getElementById("vysledek2").innerHTML = "Vysledek je <b>" + vysl + "</b>.";
+  document.getElementById("vysledek2").innerHTML = 
+  "Vysledek je <b>" + vysl + "</b>.";
   
 }
